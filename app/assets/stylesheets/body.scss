@@ -1,0 +1,218 @@
+.application-container {
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+  h1 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: bold;
+    font-size: 60px;
+  }
+  p {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 24px;
+    font-style: italic;
+  }
+}
+
+.grid-container {
+  display: grid;
+  height: 90vh;
+  width: 100vw;
+  grid-template-columns: 0.25fr 3fr 1.5fr 0.25fr;
+  grid-template-rows: 0.5fr 0.25fr 0.15fr 1.25fr;
+  grid-gap: 0px 0px;
+  grid-template-areas: ". title-header . . ." ". sub-header . . ." ". . line-left nav-header ." ". . line-left-long nav-menu ." ". . . . .";
+}
+
+.nav-menu {
+  grid-row: 3 / 4;
+  grid-column: 3;
+  ul {
+    padding-top: 0;
+    list-style: none;
+    writing-mode: vertical-rl;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 40px;
+  }
+
+  li a {
+    text-decoration: none;
+    cursor: pointer;
+    border-left: 1.5px solid;
+    background-image: linear-gradient(45deg, #fbff0000 0%, #ffc800de 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0em;
+    background-position: -25px 0%;
+    transition: background-size 0.5s ease-in;
+    &:hover {
+      background-size: 100% 10em;
+    }
+  }
+}
+
+.header-text {
+  grid-area: title-header;
+  align-self: end;
+}
+
+.header-info {
+  grid-area: sub-header;
+  align-self: end;
+}
+.split-line-top {
+  grid-column: 2;
+  grid-row: 3;
+  border-top: 12px solid;
+  border-color: white;
+}
+.split-line {
+  grid-area: line-left;
+  border-left: 12px solid;
+  border-color: white;
+}
+
+.split-line-left {
+  grid-area: line-left-long;
+  border-left: 12px solid;
+  border-color: white;
+}
+#about {
+  cursor: pointer;
+}
+.about-me {
+  background-color: white;
+  color: black;
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: 0.25fr 3fr 1.5fr 0.25fr;
+  grid-template-rows: 0.5fr 0.25fr 2.25fr;
+  grid-gap: 0px 0px;
+  grid-template-areas: ". title-header . . ." ". sub-header . . ." ". . line-left nav-header ." ". . line-left-long nav-menu ." ". . . . .";
+
+  .nav-menu li a {
+    color: black;
+    cursor: pointer;
+  }
+  .header-info {
+    border-bottom: 12px solid;
+  }
+
+  .split-line-left {
+    border-color: black;
+  }
+  .split-line {
+    border-color: black;
+  }
+}
+
+.about-line-left {
+  grid-column: 3;
+  grid-row: 1 / 3;
+  border-left: 12px solid;
+}
+
+.my-story {
+  grid-column: 2;
+  grid-row: 3;
+  padding-top: 2em;
+  ul {
+    padding-top: 1em;
+    padding-left: 0;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 20px;
+  }
+  ul strong {
+    color: #904C77;
+  }
+  ul em {
+    font-weight: bold;
+    font-style: regular;
+  }
+}
+
+#project {
+  cursor: pointer;
+}
+
+.project-section {
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: 0.25fr 3fr 1.5fr 0.25fr;
+  grid-template-rows: 0.5fr 0.25fr 2.25fr;
+  grid-gap: 0px 0px;
+  grid-template-areas: ". title-header . . ." ". sub-header . . ." ". . line-left nav-header ." ". . line-left-long nav-menu ." ". . . . .";
+
+  .header-info {
+    border-bottom: 12px solid;
+  }
+
+  .tabcontent {
+  display: none;
+  animation: fadeEffect 1s;
+  }
+
+  .tablinks.active {
+    background-size: 100% 10em;
+  }
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.project-info {
+  grid-column:  2;
+  grid-row: 3;
+}
+
+.project-title {
+  padding-top: 2em;
+  h2 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: bold;
+    font-size: 38px;
+  }
+}
+
+.project-details {
+  ul {
+    padding-left: 0;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 20px;
+    list-style: none;
+
+    li {
+      padding-top: 1em;
+    }
+  }
+}
+
+.project-skill {
+  display: inline-flex;
+  align-items: center;
+
+  i {
+    height: 50px;
+    width: 50px;
+    font-size: 50px;
+    text-align: center;
+  }
+
+  i:hover + label {
+    opacity: 0.8;
+  }
+
+  label {
+    opacity: 0;
+    transition: 0.5s;
+    margin-bottom: 0;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 18px;
+  }
+
+  img {
+    margin-top: -2px;
+    object-fit: cover;
+  }
+}
