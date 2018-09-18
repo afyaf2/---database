@@ -12,7 +12,7 @@
     <ul>
       <li><a id='about'>About</a></li>
       <li><a id='project'>Projects</a></li>
-      <li>Contact</li>
+      <li><a id='contact'>Contact</a></li>
     </ul>
   </div>
 </div>
@@ -32,7 +32,6 @@
     <ul>I love <strong>beets</strong> and <em>beats.</em></ul>
   </div>
   <div class="split-line"></div>
-<!--   <div class="split-line-left"></div> -->
   <div class="nav-menu">
     <ul>
       <li><a href="https://www.github.com/afyaf2" target="_blank">Github</a></li>
@@ -61,12 +60,14 @@
           <li>The stack : RubyOnRails, JavaScript, jQuery, HTML5/SCSS, Bootstrap, Heroku, Github</li>
         </ul>
       </div>
-      <div class="col-xs-12 col-lg-6 project-skill"><i class="fab fa-github"></i><label>Github</label></div>
-      <div class="col-xs-12 col-lg-6 project-skill"><i class="fas fa-link"></i><label>Plan your night</label></div>
-      <div class="col-xs-12 col-lg-3 project-skill"><i class="fab fa-html5" style="color: #E54C21"></i></div>
-      <div class="col-xs-12 col-lg-3 project-skill"><i class="fab fa-js-square" style="color: #F5DE19"></i></div>
-      <div class="col-xs-12 col-lg-3 project-skill"><i class="fab fa-css3" style="color: #33A8DD"></i></div>
-      <div class="col-xs-12 col-lg-3 project-skill"><%= image_tag("rails-icon-sm.png")%></div>
+        <div class="d-flex flex-wrap justify-content-sm-start justify-content-lg-between">
+          <div class="project-skill"><i class="fab fa-github"></i><label>Github</label></div>
+          <div class="project-skill"><i class="fas fa-link"></i><label>Plan your night</label></div>
+          <div class="project-skill"><i class="fab fa-html5" style="color: #E54C21"></i></div>
+          <div class="project-skill"><i class="fab fa-css3" style="color: #33A8DD"></i></div>
+          <div class="project-skill"><i class="fab fa-js-square" style="color: #F5DE19"></i></div>
+          <div class="project-skill"><%= image_tag("rails-icon-sm.png")%></div>
+        </div>
       </div>
     </div>
     <div class="tabcontent" id="book-a-chef">
@@ -81,14 +82,16 @@
           <li>The stack : RubyOnRails, JavaScript, jQuery, HTML5/SCSS, Bootstrap, Google Maps API, Heroku, Github</li>
         </ul>
       </div>
-      <div class="col-xs-12 col-lg-6 project-skill"><i class="fab fa-github"></i><label>Github</label></div>
-      <div class="col-xs-12 col-lg-6 project-skill"><i class="fas fa-link"></i><label>Book a chef</label></div>
-      <div class="col-xs-12 col-lg-3 project-skill"><i class="fab fa-html5" style="color: #E54C21"></i></div>
-      <div class="col-xs-12 col-lg-3 project-skill"><i class="fab fa-css3" style="color: #33A8DD"></i></div>
-      <div class="col-xs-12 col-lg-3 project-skill"><i class="fab fa-js-square" style="color: #F5DE19"></i></div>
-      <div class="col-xs-12 col-lg-3 project-skill"><%= image_tag("rails-icon-sm.png")%></div>
+        <div class="d-flex flex-wrap justify-content-sm-start justify-content-lg-between">
+            <div class="project-skill"><i class="fab fa-github"></i><label>Github</label></div>
+            <div class="project-skill"><i class="fas fa-link"></i><label>Plan your night</label></div>
+            <div class="project-skill"><i class="fab fa-html5" style="color: #E54C21"></i></div>
+            <div class="project-skill"><i class="fab fa-css3" style="color: #33A8DD"></i></div>
+            <div class="project-skill"><i class="fab fa-js-square" style="color: #F5DE19"></i></div>
+            <div class="project-skill"><%= image_tag("rails-icon-sm.png")%></div>
+        </div>
       </div>
-    </div>
+      </div>
     <div class="tabcontent" id="slack-react">
       <div class="row no-gutters">
         <div class="col-xs-12 project-title">
@@ -101,12 +104,14 @@
           <li>The stack : React, Node.Js(express), Chatkit API, Github, and Semantic UI</li>
         </ul>
       </div>
-      <div class="col-xs-12 col-lg-6 project-skill"><i class="fab fa-github"></i><label>Github</label></div>
-      <div class="col-xs-12 col-lg-6 project-skill"><i class="fas fa-link"></i><label>Watch demo</label></div>
-      <div class="col-xs-12 col-lg-3 project-skill"><i class="fab fa-react" style="color:#61DAFB"></i></div>
-      <div class="col-xs-12 col-lg-3 project-skill"><i class="fab fa-node-js" style="color: #77B063"></i></i></div>
-      <div class="col-xs-12 col-lg-3 project-skill"><i class="fab fa-css3" style="color: #33A8DD"></i></div>
-      <div class="col-xs-12 col-lg-3 project-skill"><%= image_tag("semantic-logo.png")%></div>
+      <div class="d-flex flex-wrap justify-content-sm-start justify-content-lg-between">
+      <div class="project-skill"><i class="fab fa-github"></i><label>Github</label></div>
+      <div class="project-skill"><i class="fas fa-link"></i><label>Watch demo</label></div>
+        <div class="project-skill"><i class="fab fa-react" style="color:#61DAFB"></i></div>
+        <div class="project-skill"><i class="fab fa-node-js" style="color: #77B063"></i></i></div>
+        <div class="project-skill"><i class="fab fa-css3" style="color: #33A8DD"></i></div>
+        <div class="project-skill"><%= image_tag("semantic-logo.png")%></div>
+      </div>
       </div>
 
     </div>
@@ -115,10 +120,32 @@
   <div class="split-line"></div>
   <div class="nav-menu">
     <ul>
-      <li><a class="tablinks" onclick="openProject(event, 'vesper')">Vesper</a></li>
+      <li><a class="tablinks" onclick="openProject(event, 'vesper')" id='defaultOpen'>Vesper</a></li>
       <li><a class="tablinks" onclick="openProject(event, 'book-a-chef')">BookAChef</a></li>
       <li><a class="tablinks" onclick="openProject(event, 'slack-react')">Slack.React</a></li>
     </ul>
+  </div>
+</div>
+<div class="contact-me">
+  <div class="header-text">
+    <h1>Contact.</h1>
+  </div>
+  <div class="header-info">
+    <p>Got an idea you want to bring to life? Get in touch.</p>
+  </div>
+  <div class="about-line-left"></div>
+  <div class="split-line"></div>
+  <div class="split-line-left"></div>
+  <div class="contact-info">
+    <div class="row no-gutters">
+      <div class="col-xs-12 project-details">
+        <ul class="contact-details">
+          <li>I can build you a beautiful website, an optimised MVP, high converting e-mail marketing templates & more!</li>
+          <li>These are the best ways to reach out :</li>
+          <li><a href="mailto:awfrej@googlemail.com">awfrej@gmail.com</a></li>
+          <li><a href="https://www.instagram.com/awfrej" target="_blank">instagram</a></li>
+        </ul>
+      </div>
   </div>
 </div>
 
@@ -139,6 +166,14 @@ $("#project").click(function() {
         scrollTop: $(".project-section").offset().top
     }, 2000);
 });
+$("#contact").click(function() {
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $(".contact-me").offset().top
+    }, 2000);
+});
+
+$("#defaultOpen").click();
+
 
 function openProject(evt, projectName) {
     // Declare all variables
