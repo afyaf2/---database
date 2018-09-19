@@ -1,4 +1,10 @@
-
+development:
+  adapter: sqlite3
+  encoding: unicode
+  database:  --database_dev
+  pool: 5
+  username: Adam
+  password:
 test:
   adapter: postgresql
   encoding: unicode
