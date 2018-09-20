@@ -16,7 +16,7 @@
 
 .grid-container {
   display: grid;
-  height: 80vh;
+  height: 85vh;
   width: 100vw;
   grid-template-columns: 0.25fr 3fr 1.5fr 0.25fr;
   grid-template-rows: 0.5fr 0.25fr 2.25fr;
@@ -222,10 +222,6 @@
   grid-gap: 0px 0px;
   grid-template-areas: ". title-header . . ." ". sub-header . . ." ". . line-left nav-header ." ". . line-left-long nav-menu ." ". . . . .";
 
-  .header-info {
-    border-bottom: 12px solid;
-  }
-
   .split-line-left {
     border-color: black;
   }
@@ -239,6 +235,7 @@
   grid-row: 3;
   padding-top: 2em;
   border-bottom: 12px solid;
+  border-top: 12px solid;
 }
 
 .contact-details {
