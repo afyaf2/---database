@@ -272,17 +272,19 @@
   }
   a {
     color: white;
-    opacity: 0.1;
-    transition: 0.3s;
-    text-decoration: underline;
-  &:hover {
-    opacity: 1;
-    color: white;
-  }
   p {
     font-size: 18px;
     margin-top: 0.6em;
     padding-left: 0.6em;
+    text-decoration: underline;
+    opacity: 0.1;
+    padding-bottom: 0;
+    transition: 0.3s;
+    &:hover {
+    opacity: 1;
+    color: white;
+    text-decoration: underline;
+    }
   }
   }
 }
